@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Victor Hugo Soares Tavares</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="12f771e7-e4a0-80d1-9aa6-d5bbef16cd48" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1615953061992-e1263493c867?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Victor Hugo Soares Tavares</h1><p class="page-description"></p></header><div class="page-body"><h3 id="12f771e7-e4a0-80a4-9e8d-e38726692f8f" class="">Desenvolvedor | Engenheiro da Computação | Especialista em Ciência de Dados</h3><hr id="7d1758c0-acb4-425a-ae8f-e85e4e62e5a7"/><div id="853e46fc-a15c-4f5e-bf0e-eba82ec06278" class="column-list"><div id="e204f215-a7b5-462b-9cc3-b1128686a80e" style="width:25%" class="column"><figure id="6eaa1718-ccfe-4f2b-8225-3f9c54daad83" class="image"><a href="1000070267.jpg"><img style="width:240px" src="1000070267.jpg"/></a></figure><p id="12f771e7-e4a0-8019-b8f3-e574d0c3d6ea" class="">
+</p></div><div id="485755d2-feae-4d06-9117-f1d9c99791d9" style="width:74.99999999999997%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ea6c2e13-6e5c-4eeb-8a50-c4b9a346c1a1"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/username_lightgray.svg"/></div><div style="width:100%"><strong>vh.st1503@outlook.com</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e6db40ff-5dd6-4806-9e20-ce4dbff49914"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/map_lightgray.svg"/></div><div style="width:100%"><strong>Sorocaba - SP</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f1711de7-dd27-4ac8-be68-6094c01db25f"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/phone-call_lightgray.svg"/></div><div style="width:100%"><strong>(15</strong>) 9.9811-5496</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5148d301-b9fc-4285-9525-cae6d107cec9"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/git_lightgray.svg"/></div><div style="width:100%"><a href="https://github.com/tavares51">github</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="12f771e7-e4a0-8032-9974-ce4ef4ed5ab8"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/link_lightgray.svg"/></div><div style="width:100%"><a href="https://www.linkedin.com/in/victor-hugo-soares-tavares-642255160/">linkedin</a></div></figure></div></div><hr id="d47c78df-bd8f-4d6c-8429-160ecaeb3232"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4bb6395f-9cf8-49fb-9bc0-37beafe877af"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/user-circle-filled_lightgray.svg"/></div><div style="width:100%">Busco aplicar minhas habilidades como desenvolvedor e especialista em ciência de dados em um ambiente colaborativo e desafiador. Tenho experiência com tecnologias como Python, R, Spark e ferramentas para data warehouse (Google BigQuery) e modelagem de dados. Meu conhecimento abrange também computação em nuvem (AWS e Google Cloud), processos de ETL e análise de Big Data. Além disso, possuo experiência no desenvolvimento de aplicações web e APIs utilizando Django e Django Rest Framework. Estou sempre atento às inovações tecnológicas e motivado por desafios que impulsionem meu crescimento profissional e estimulem a criação de soluções inovadoras.</div></figure><h1 id="59ee0bdf-d525-473d-9e10-806a0e89529b" class="">Experiência Profissional</h1><hr id="cb88ec0a-5922-4060-a6fd-1263e8da8131"/><blockquote id="f49b50a2-1b36-4dcb-82c8-9e254b7f9f74" class=""><strong>Desenvolvedor - Almaviva Solutions (2021 - Atualmente)</strong><ul id="b1405fb8-4050-451e-b901-89cd10a7440c" class="bulleted-list"><li style="list-style-type:disc">Expertise na implementação de soluções de gestão de ativos e sistemas IoT no IBM Maximo;</li></ul><ul id="12f771e7-e4a0-80a1-b35a-e1387bbce422" class="bulleted-list"><li style="list-style-type:disc">Utilização de tecnologias como Python, Java, JavaScript e bancos de dados relacionais, D<strong>esenvolvimento </strong>de Relatórios BIRT;</li></ul><ul id="12f771e7-e4a0-80ab-92df-c6680bb0852a" class="bulleted-list"><li style="list-style-type:disc">Participação em projetos notáveis: DETRAN-SP (fiscalização, desmontes e pátios) e Eletro Nuclear.</li></ul></blockquote><blockquote id="98f49e78-0c02-4948-bf6c-c1a43b864ec5" class=""><strong>Desenvolvedor Python - Facens (Projeto Huawei) (2018 - 2021)</strong><ul id="cd0fae68-9cc1-495f-89cb-a12e460debb5" class="bulleted-list"><li style="list-style-type:disc">Atuei no setor de TI na equipe P&amp;DC;</li></ul><ul id="06e5e213-c129-49a0-8a8e-ef258167487a" class="bulleted-list"><li style="list-style-type:disc">Desenvolvi soluções para automação de tarefas usando RPA com Selenium (Python);</li></ul><ul id="12f771e7-e4a0-8063-885e-f837c5934e46" class="bulleted-list"><li style="list-style-type:disc">Desenvolvi e dashboards utilizando Power BI;</li></ul><ul id="12f771e7-e4a0-80a2-acbf-f335a878c0e9" class="bulleted-list"><li style="list-style-type:disc">Realizei ETLs  com Python e suas bibliotecas (Pandas, OpenPyXL, XLRD, Qt Design, Numpy, etc.).</li></ul></blockquote><h1 id="d809c647-4c3c-4859-bf99-d80e1d5c5258" class="">Formação</h1><hr id="b85751c3-5290-42bb-9906-62e9aa9404fa"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="58f23e55-657f-42bf-8a53-d78e25ee9d6f"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/graduate_gray.svg"/></div><div style="width:100%"><strong>Faculdade de Engenharia de Sorocaba - SP (2017- 2021)</strong><p id="9671b3c9-bdac-4a72-9b12-aa07fbff23dd" class="">Graduação - Engenharia da Computação</p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ebc4d7e9-861e-4f36-b4bb-4ac2ec95be7e"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/graduate_gray.svg"/></div><div style="width:100%"><strong>Faculdade de Engenharia de Sorocaba - SP -  (2022- 2024)</strong><p id="a3dfa7c6-1c37-404d-afbd-6e6d4817b0a4" class="">Pós Graduação - Especialização em Ciência de Dados</p></div></figure><p id="9d1fac72-c2b0-4652-a50b-aacd5d26a299" class="">
+</p><h1 id="fde9a322-5d19-4a92-8903-cf2e0e229dbb" class="">Projetos e Participações</h1><hr id="362530d0-2211-49f3-ad12-3cce8a8894d1"/><h3 id="0b90948d-f35f-43f1-a802-e3160151d28e" class=""><strong>Projeto Huawei (2019 - 2021)</strong></h3><p id="3902b282-ab14-4f8c-b05c-00b26b12fc7a" class="">Entre os anos de 2019 e 2021, participei do projeto Huawei em parceria com a Facens (Faculdade de Engenharia de Sorocaba), atuando no setor de TI da equipe P&amp;DC. Nesse período, desenvolvi automações utilizando Python e VBA, criei processos de ETL e dashboards, além de implementar a automatização de rotinas de atualização de dados.</p><h3 id="2caea029-eb52-4627-8dda-e9ddb5ce99ea" class=""><strong>Projeto Detran-SP (2021 - 2023)</strong></h3><p id="d35976d3-666f-4fe5-8c0e-d4f7592cb66f" class="">Por meio da empresa Alamaviva Solutions (Magna Sistemas), participei das três frentes do projeto para o Detran-SP: Pátios, Desmontes e Fiscalização. Fiz parte da equipe responsável pela implementação do IBM Maximo, incluindo automações de tarefas, gestão de ativos e criação de relatórios e indicadores.</p><h3 id="12f771e7-e4a0-80fc-8b07-f79a64f00be5" class=""><strong>Projeto Eletronuclear - Angra 1 (2023 - Atualmente)</strong></h3><p id="12f771e7-e4a0-8085-94b5-db31b785c9d6" class="">Iniciei em 2013 minha participação na equipe de D<strong>esenvolvimento </strong>do IBM Maximo no projeto de migração de sistemas para a usina nuclear de Angra 1, com o intuito de renovar os sistemas já consolidados, incorporando as novas funcionalidades do IBM Maximo, como gestão de ativos, controle de processos e geração de relatórios e indicadores.</p><h3 id="12f771e7-e4a0-80d0-9acb-e8b65c6201a2" class=""><strong>Participação Hackathon - UFTPR (2023)</strong></h3><p id="12f771e7-e4a0-800b-983a-f64e60a01998" class="">Em outubro de 2023, participei do hackathon promovido pela UTFPR de Ponta Grossa - PR, onde o desafio foi desenvolver, em equipe, um módulo para um sistema de controle para uma empresa de logística. Juntamente com minha equipe, fomos consagrados campeões.</p><h3 id="12f771e7-e4a0-80d6-9dc8-ed2da1aae9a7" class=""><strong>Participação Coworking Universidades - Parque Tecnológico de Sorocaba (2018)</strong></h3><p id="12f771e7-e4a0-8083-9834-cd328c9423a9" class="">No segundo semestre de 2018, participei do primeiro coworking universitário promovido pelo Parque Tecnológico de Sorocaba - SP, onde tive acesso a diversas mentorias, como inteligência emocional, oratória, trabalho em equipe, gestão de projetos e marketing digital. Nesse ambiente colaborativo, desenvolvi com meu grupo um portal de gestão de zeladoria para a prefeitura, aplicando os conceitos adquiridos durante o programa.</p><h1 id="b113c118-eddb-426a-ab90-8c087de128ff" class="">Habilidades</h1><hr id="0ccfeb18-a98c-4078-b648-964f02901d36"/><div id="d2745c84-1840-40fe-8c9b-cc9145e251fa" class="column-list"><div id="c2ce27b8-441d-4218-aff5-d9dacf39c44c" style="width:33.333333333333336%" class="column"><ul id="89da14c1-38a1-4a73-855a-8e912d60f638" class="bulleted-list"><li style="list-style-type:disc">Gestão de Equipes</li></ul><ul id="39e14dfa-fed8-4cd7-8d28-998207a2a650" class="bulleted-list"><li style="list-style-type:disc">Geração de Dashboards (Power BI)</li></ul><ul id="146771e7-e4a0-8052-8b44-f55c22d8da6c" class="bulleted-list"><li style="list-style-type:disc">Big Data</li></ul><ul id="146771e7-e4a0-80e3-913e-ea9af4a6a8ed" class="bulleted-list"><li style="list-style-type:disc">Data Wherehouse</li></ul><ul id="c5790c5c-8bc2-419f-9be8-4232ab5166ec" class="bulleted-list"><li style="list-style-type:disc">Java</li></ul><ul id="ac9597b5-b0fb-4dee-9e0e-5ef33d8a6942" class="bulleted-list"><li style="list-style-type:disc">Python </li></ul><ul id="12f771e7-e4a0-80ed-8087-cb8c5e8baac3" class="bulleted-list"><li style="list-style-type:disc">Pandas</li></ul><ul id="12f771e7-e4a0-80d1-a378-fcf4d4f04b0e" class="bulleted-list"><li style="list-style-type:disc">Organização</li></ul><p id="b5d20314-9ba0-4fa3-b1e2-dc000e3ccfda" class="">
+</p></div><div id="7126b678-c553-49d7-aea8-abc47650474b" style="width:33.33333333333333%" class="column"><ul id="10ecb39f-da2a-47bc-852f-6ddfcf5f2174" class="bulleted-list"><li style="list-style-type:disc">Django</li></ul><ul id="7e6316af-bbed-4198-aee4-b46f97e424f5" class="bulleted-list"><li style="list-style-type:disc">Front-end</li></ul><ul id="6e51a522-b638-4bfc-a611-275c17cb0c22" class="bulleted-list"><li style="list-style-type:disc">Excel</li></ul><ul id="d6d3cf89-a2cd-41ff-bffe-0c61bfbb52a2" class="bulleted-list"><li style="list-style-type:disc">Machine Learinig</li></ul><ul id="12f771e7-e4a0-801c-b789-f82825ef6d36" class="bulleted-list"><li style="list-style-type:disc">Estatística (Python e R)</li></ul><ul id="12f771e7-e4a0-8083-a00b-c8ed42f6b468" class="bulleted-list"><li style="list-style-type:disc">Numpy</li></ul><ul id="12f771e7-e4a0-8032-ad0a-d8a018abb414" class="bulleted-list"><li style="list-style-type:disc">Comunicação</li></ul><ul id="146771e7-e4a0-8075-a59b-f6615da50115" class="bulleted-list"><li style="list-style-type:disc">AWS</li></ul><ul id="146771e7-e4a0-8007-8d21-d8ba1b73c710" class="bulleted-list"><li style="list-style-type:disc">Google Cloud</li></ul><p id="12f771e7-e4a0-807a-9440-f5d22beccc95" class="">
+</p></div><div id="895f6b7a-279c-4d63-a19b-a0e5400f5055" style="width:33.33333333333334%" class="column"><ul id="cd525230-2b6c-4a3a-a2dd-8740b48d6022" class="bulleted-list"><li style="list-style-type:disc">IBM MAXIMO</li></ul><ul id="a19c7002-9ed2-4a6c-93bd-0012f5d15f4b" class="bulleted-list"><li style="list-style-type:disc">Gestão de Projetos</li></ul><ul id="12f771e7-e4a0-80a7-a91d-d3dfe5d160cc" class="bulleted-list"><li style="list-style-type:disc">Cloud</li></ul><ul id="12f771e7-e4a0-805e-86b9-db9bc2a546d0" class="bulleted-list"><li style="list-style-type:disc">.NET</li></ul><ul id="12f771e7-e4a0-800c-a686-dd22ff92c3a0" class="bulleted-list"><li style="list-style-type:disc">BIRT</li></ul><ul id="12f771e7-e4a0-80ac-a102-cc105cedcdcb" class="bulleted-list"><li style="list-style-type:disc">Trabalho em Equipe</li></ul><ul id="12f771e7-e4a0-80e3-864b-f74b7cdb236f" class="bulleted-list"><li style="list-style-type:disc">Inglês (Cursando)</li></ul><ul id="146771e7-e4a0-8078-baec-c9c83a25a068" class="bulleted-list"><li style="list-style-type:disc">Databricks</li></ul><p id="2ec6a907-d3ac-4ccd-ab00-ae8665ab4fc8" class="">
+</p></div></div><hr id="f0c7ef00-aac9-49bb-a6a1-34a58468d4b0"/><p id="448f26a9-d579-4388-8cc0-77d88dc84a10" class="">
+</p><p id="9cbff6ba-9b9c-4f42-897d-82043e3d3ffe" class="">
+</p><p id="02bf6184-92c5-4995-b7ab-041bc652e746" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
